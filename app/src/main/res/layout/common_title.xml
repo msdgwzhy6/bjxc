@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#C72A29"
+    android:gravity="center_vertical"
+    android:paddingBottom="14dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="14dp">
+
+    <ImageView
+        android:id="@+id/iv_title_cn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/common_title_cn"/>
+
+    <ImageView
+        android:id="@+id/iv_title_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_title_cn"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/common_title_en"/>
+
+
+    <TextView
+        android:id="@+id/tv_log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/icon_logout"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_issue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@id/tv_log_out"
+        android:drawableLeft="@mipmap/icon_help"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@id/tv_issue"
+        android:drawableLeft="@mipmap/icon_home"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@id/tv_home"
+        android:drawableLeft="@mipmap/icon_user"
+        android:drawablePadding="4dp"
+        android:drawableRight="@mipmap/icon_drop_down"
+        android:text="名字"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+</RelativeLayout>

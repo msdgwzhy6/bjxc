@@ -1,0 +1,376 @@
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxwl.frame.fragment.ConfControlFragment">
+
+    <!--右边控制栏和信息-start-->
+    <ScrollView
+        android:id="@+id/sl_right_control"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        app:layout_widthPercent="25%">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="24dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_conf_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_conf_info"
+                android:drawablePadding="6dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="会议信息"
+                android:textColor="#FAB951"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/view_line_one"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_conf_info"
+                android:background="#EFEFEF"/>
+
+            <TextView
+                android:id="@+id/tv_assembly_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line_one"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="会场名称"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_assembly_name"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="召开时间"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_start_time"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="结束时间"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_voice_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_end_time"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="声控切换"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_lecture_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_voice_switch"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="演讲会场"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_chairman_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_lecture_hall"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="主席会场"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_broadcast_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_chairman_hall"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="广播会场"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_secondary_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_broadcast_hall"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="辅流会场"
+                android:textColor="#333"/>
+
+
+            <View
+                android:id="@+id/view_line_two"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_broadcast_hall"
+                android:background="#EFEFEF"/>
+
+            <TextView
+                android:id="@+id/tv_conf_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line_two"
+                android:drawableLeft="@mipmap/icon_conf_info"
+                android:drawablePadding="6dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="会议控制"
+                android:textColor="#FAB951"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/view_line_three"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_conf_control"
+                android:background="#EFEFEF"/>
+
+            <TextView
+                android:id="@+id/tv_set_chairman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line_three"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="设置主席"
+                android:textColor="#333"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_set_chairman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_set_chairman"
+                android:layout_alignTop="@id/tv_set_chairman"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_set_chairman"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_set_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_set_chairman"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="声控切换"
+                android:textColor="#333"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_set_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_set_voice"
+                android:layout_alignLeft="@id/sv_set_chairman"
+                android:layout_alignTop="@id/tv_set_voice"
+                android:layout_toRightOf="@id/tv_set_voice"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_broadcast_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_set_voice"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="广播会场"
+                android:textColor="#333"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_broadcast_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_broadcast_venue"
+                android:layout_alignLeft="@id/sv_set_chairman"
+                android:layout_alignTop="@id/tv_broadcast_venue"
+                android:layout_toRightOf="@id/tv_broadcast_venue"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_set_poll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_set_chairman"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="设置轮询"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_set_poll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_set_poll"
+                android:layout_alignLeft="@id/sv_set_chairman"
+                android:layout_alignTop="@id/tv_set_poll"
+                android:layout_toRightOf="@id/tv_set_poll"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_fractional_poll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_set_voice"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="分频轮询"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_fractional_poll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_fractional_poll"
+                android:layout_alignLeft="@id/sv_set_chairman"
+                android:layout_alignTop="@id/tv_fractional_poll"
+                android:layout_toRightOf="@id/tv_fractional_poll"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_venue_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_fractional_poll"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="会场音量"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_venue_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_venue_volume"
+                android:layout_alignLeft="@id/sv_set_chairman"
+                android:layout_alignTop="@id/tv_venue_volume"
+                android:layout_toRightOf="@id/tv_venue_volume"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_venue_sounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_venue_volume"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="会场声音"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_venue_sounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_venue_sounds"
+                android:layout_alignLeft="@id/sv_set_chairman"
+                android:layout_alignTop="@id/tv_venue_sounds"
+                android:layout_toRightOf="@id/tv_venue_sounds"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+    <!--右边控制栏和信息-end-->
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/sl_right_control"
+        android:background="#F5F5F5"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/view_center"
+        android:paddingBottom="6dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="6dp"
+        android:text="北京西城讨论会"
+        android:textSize="16sp"/>
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:layout_toLeftOf="@id/view_center"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    <!--<include-->
+    <!--android:id="@+id/include_list"-->
+    <!--layout="@layout/refresh_recycler_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/tv_title"-->
+    <!--android:layout_toLeftOf="@id/view_center"/>-->
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

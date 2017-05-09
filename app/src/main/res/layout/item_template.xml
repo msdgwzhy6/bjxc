@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <!--从模板生成的item-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="序号"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="10%"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="模板名称"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="22.5%"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="创建人"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="22.5%"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="创建时间"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="22.5%"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="模板号"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="22.5%"
+        />
+
+</com.zhy.android.percent.support.PercentLinearLayout>

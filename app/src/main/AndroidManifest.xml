@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.zxwl.frame"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 欢迎界面 -->
+        <activity
+            android:name=".activity.WelcomActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            />
+
+        <!-- 会议预约界面 -->
+        <activity
+            android:name=".activity.BookingMeetingActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+
+        <!-- 会议预约 -->
+        <activity
+            android:name=".activity.NewConfActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <!-- 会议审批弹出框 -->
+        <activity
+            android:name=".activity.ConfApprovalDialogActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/dialogstyle">
+        </activity>
+
+        <!-- 会议审批列表 -->
+        <activity
+            android:name=".activity.ConfApprovalListActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".activity.SetImageActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!--会议控制列表-->
+        <activity
+            android:name=".activity.ConfControlListActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!--会议控制界面-->
+        <activity
+            android:name=".activity.ConfControlActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+
+        <activity
+            android:name=".activity.ContactBookDialogActivity"
+            android:theme="@style/dialogstyle">
+        </activity>
+        <!--锁屏-->
+        <service android:name=".views.lockscreen.LockScreenService"></service>
+
+        <activity
+            android:name=".activity.LauncherHomeActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LockScreenActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.lockscreen"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

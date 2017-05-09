@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color"/>
+        <attr name="hideArrow" format="boolean"/>
+        <attr name="backgroundSelector" format="integer"/>
+        <attr name="textTint" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlideLockView">
+        <attr name="lock_drawable" format="reference"/>
+        <attr name="lock_radius" format="dimension|reference"/>
+    </declare-styleable>
+
+
+    <!--复选框样式s-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_selectors</item>
+        <item name="android:maxHeight">10dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,62 @@
+ext {
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.2",
+            minSdkVersion    : 15,
+            targetSdkVersion : 25,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    googleVersion = "25.3.1"
+
+    googleLibrary = [
+            appcompat_v7: "com.android.support:appcompat-v7:${googleVersion}",
+            support_v4  : "com.android.support:support-v4:${googleVersion}",
+            design      : "com.android.support:design:${googleVersion}",
+            cardview    : "com.android.support:cardview-v7:${googleVersion}",
+            recyclerview: "com.android.support:recyclerview-v7:${googleVersion}",
+            cardview    : "com.android.support:cardview-v7:${googleVersion}"
+    ]
+
+    otherLibrary = [
+            //网络请求框架
+            rxjava                      : "io.reactivex:rxjava:1.1.2",
+            rxandroid                   : "io.reactivex:rxandroid:1.1.0",
+            rxlifecycle                 : "com.trello:rxlifecycle:1.0",
+            rxlifecycle_components      : "com.trello:rxlifecycle-components:1.0",
+            retrofit                    : "com.squareup.retrofit2:retrofit:2.2.0",
+            converter_gson              : "com.squareup.retrofit2:converter-gson:2.2.0",
+            converter_scalars           : "com.squareup.retrofit2:converter-scalars:2.0.2",
+            adapter_rxjava              : "com.squareup.retrofit2:adapter-rxjava:2.2.0",
+            retrofit_logging_interceptor: "com.squareup.okhttp3:logging-interceptor:3.2.0",
+            gson                        : "com.google.code.gson:gson:2.6.2",
+            //图片加载
+            glide                       : "com.github.bumptech.glide:glide:3.7.0",
+            glide_transformations       : "jp.wasabeef:glide-transformations:2.0.2",
+            glide_okhttp3_integration   : "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",
+            //内存泄漏检测
+            leakcanary_test             : "com.squareup.leakcanary:leakcanary-android-no-op:1.5",
+            leakcanary                  : "com.squareup.leakcanary:leakcanary-android:1.5",
+            //线上bug收集
+            bugly                       : "com.tencent.bugly:crashreport:latest.release",
+            //tablayout
+            flycoTabLayout              : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            //上拉刷新和下拉加载
+            refreshLayot                : "com.lcodecorex:tkrefreshlayout:1.0.7",
+            //状态栏控制
+            statusbaruitl               : "com.jaeger.statusbaruitl:library:1.3.6",
+            //轮播图
+            convenientbanner            : "com.bigkoo:convenientbanner:2.0.5",
+            //打印日志
+            logger                      : "com.orhanobut:logger:1.15",
+            //对话框
+            material_dialogs            : "com.afollestad.material-dialogs:commons:0.9.4.4",
+            //百分比布局
+            percent_layout              : "com.zhy:percent-support-extends:1.0.1",
+            //时间选择框
+            timePickerDialog            : "com.jzxiang.pickerview:TimePickerDialog:1.0.0",
+            //流式布局
+            flow_layout                 : "com.nex3z:flow-layout:0.1.3"
+    ]
+}

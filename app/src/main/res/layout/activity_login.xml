@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.zxwl.frame.activity.LoginActivity">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_login_et"
+        android:hint="请输入用户名"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="#423C35"
+        android:textColorHint="#9C9B98"
+        android:textSize="14sp"
+        app:layout_widthPercent="35%"/>
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_name"
+        android:layout_below="@id/et_name"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_login_et"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="#423C35"
+        android:textColorHint="#9C9B98"
+        android:textSize="14sp"
+        app:layout_widthPercent="35%"/>
+
+    <TextView
+        android:id="@+id/tv_forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_pwd"
+        android:layout_alignRight="@+id/et_pwd"
+        android:layout_below="@id/et_pwd"
+        android:gravity="right"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:text="忘记密码?"
+        android:textColor="#64686B"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_save_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_forget_pwd"
+        android:layout_alignBottom="@+id/tv_forget_pwd"
+        android:layout_alignLeft="@+id/et_pwd"
+        android:layout_alignStart="@+id/et_pwd"
+        android:layout_toLeftOf="@id/tv_forget_pwd"
+        android:drawableLeft="@mipmap/tv_login_off"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingBottom="12dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="12dp"
+        android:text="记住我的登录信息"
+        android:textColor="#64686B"
+        android:textSize="16sp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_name"
+        android:layout_below="@id/tv_save_info"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_login_bt"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_widthPercent="35%"/>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

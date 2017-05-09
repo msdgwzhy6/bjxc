@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="12dp"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAB951"
+        android:drawableLeft="@mipmap/icon_item_convene_conf_title"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="北京西城区主管会议"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_item_control_time"
+            android:drawablePadding="12dp"
+            android:maxLines="1"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:singleLine="true"
+            android:text="会议时间"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_time"
+            android:drawableLeft="@mipmap/icon_item_control_phone"
+            android:drawablePadding="12dp"
+            android:maxLines="1"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:singleLine="true"
+            android:text="电话"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tv_pattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_phone"
+            android:drawableLeft="@mipmap/icon_item_control_mode"
+            android:drawablePadding="12dp"
+            android:maxLines="1"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:singleLine="true"
+            android:text="模式"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pattern"
+            android:drawableLeft="@mipmap/icon_item_control_type"
+            android:drawablePadding="12dp"
+            android:maxLines="1"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:singleLine="true"
+            android:text="公开会议"
+            android:textColor="#333"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rl_info"
+        android:layout_below="@+id/tv_name"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:id="@+id/tv_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_reject_bt"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="6dp"
+            android:text="会议控制"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_control"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_finish_bt"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="6dp"
+            android:text="结束会议"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

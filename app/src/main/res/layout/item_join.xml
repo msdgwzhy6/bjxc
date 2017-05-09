@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/ll_content"
+    >
+
+    <!--已选参会列表的item-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="10%">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/icon_login_check_off"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="序号"
+            android:textSize="12sp"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="所在单位"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="15%"
+        />
+
+    <TextView
+        android:id="@+id/tv_device_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="设备数"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="15%"
+        />
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="设备名称"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="45%"
+        />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="15%">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="操作"
+            android:textSize="12sp"
+            />
+
+    </FrameLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

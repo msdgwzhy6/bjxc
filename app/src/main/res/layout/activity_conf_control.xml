@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxwl.frame.activity.NewConfActivity">
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--底部操作按钮-start-->
+    <RelativeLayout
+        android:id="@+id/rl_buttom_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+        android:paddingBottom="6dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_preview_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="画面预览"
+            android:textColor="#87C737"/>
+
+
+        <TextView
+            android:id="@+id/tv_extend_conf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_extend_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="延长会议"
+            android:textColor="#57C8F2"/>
+
+        <TextView
+            android:id="@+id/tv_finish_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_toLeftOf="@id/tv_extend_conf"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="会议结束时间"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tv_set_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_finish_time"
+            android:background="@drawable/bg_set_error_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="设为异常"
+            android:textColor="#FF6C60"/>
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/tv_set_error"
+            android:background="@drawable/bg_set_error_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="结束会议"
+            android:textColor="#FF6C60"/>
+
+        <TextView
+            android:id="@+id/tv_directory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/tv_finish"
+            android:background="@drawable/bg_directory_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="从地址簿添加"
+            android:textColor="#57C8F2"/>
+
+        <TextView
+            android:id="@+id/tv_add_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/tv_directory"
+            android:background="@drawable/bg_add_party_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="添加与会方"
+            android:textColor="#56D6C6"/>
+    </RelativeLayout>
+    <!--底部操作按钮-end-->
+
+
+    <LinearLayout
+        android:id="@+id/ll_control"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_buttom_operate"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ic_title"
+        android:background="#EEE2D4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/icon_up"/>
+
+        <q.rorbin.verticaltablayout.VerticalTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#EEE2D4"
+            android:visibility="visible"
+            app:indicator_color="#FAB951"
+            app:indicator_gravity="fill"
+            app:tab_mode="fixed"/>
+
+        <ImageView
+            android:id="@+id/iv_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/icon_up"/>
+    </LinearLayout>
+
+
+    <com.zxwl.frame.views.CustomViewPager
+        android:id="@+id/vp_content"
+        android:layout_toLeftOf="@id/ll_control"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_buttom_operate"
+        android:layout_below="@id/ic_title"
+        >
+    </com.zxwl.frame.views.CustomViewPager>
+
+
+</RelativeLayout>

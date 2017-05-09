@@ -1,0 +1,296 @@
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxwl.frame.fragment.ConfControlFragment">
+
+    <!--右边控制栏和信息-start-->
+    <ScrollView
+        android:id="@+id/sl_right_control"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        app:layout_widthPercent="25%">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="24dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_assembly_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_conf_info"
+                android:drawablePadding="6dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="会场信息"
+                android:textColor="#FAB951"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/view_line_one"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_assembly_info"
+                android:background="#EFEFEF"/>
+
+            <TextView
+                android:id="@+id/tv_terminal_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line_one"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="终端标识符"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_terminal_logo"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="单位名称"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_assembly_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_unit"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="会场名称"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_watch_assembly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_assembly_name"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="观看会场"
+                android:textColor="#333"/>
+
+            <TextView
+                android:id="@+id/tv_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_watch_assembly"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="IP地址"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_connection_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_ip"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="连接状态"
+                android:textColor="#333"/>
+
+            <View
+                android:id="@+id/view_line_two"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_connection_status"
+                android:background="#EFEFEF"/>
+
+            <TextView
+                android:id="@+id/tv_assembly_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line_two"
+                android:drawableLeft="@mipmap/icon_conf_info"
+                android:drawablePadding="6dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="会场控制"
+                android:textColor="#FAB951"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/view_line_three"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_assembly_control"
+                android:background="#EFEFEF"/>
+
+            <!--切换按钮-start-->
+            <TextView
+                android:id="@+id/tv_microphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line_three"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="麦克风静音"
+                android:textColor="#333"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_microphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_microphone"
+                android:layout_alignTop="@id/tv_microphone"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_microphone"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_set_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_microphone"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="设置观看"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_set_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_set_watch"
+                android:layout_alignLeft="@id/sv_microphone"
+                android:layout_alignTop="@id/tv_set_watch"
+                android:layout_toRightOf="@id/tv_set_watch"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_assembly_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_set_watch"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="会场音量"
+                android:textColor="#333"
+                android:visibility="gone"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_assembly_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_assembly_volume"
+                android:layout_alignLeft="@id/sv_microphone"
+                android:layout_alignTop="@id/tv_assembly_volume"
+                android:layout_toRightOf="@id/tv_assembly_volume"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_assembly_sounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_microphone"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="会场静音"
+                android:textColor="#333"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_assembly_sounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_assembly_sounds"
+                android:layout_alignLeft="@id/sv_microphone"
+                android:layout_alignTop="@id/tv_assembly_sounds"
+                android:layout_toRightOf="@id/tv_assembly_sounds"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_assembly_sounds"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="呼叫会场"
+                android:textColor="#333"/>
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/sv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_call"
+                android:layout_alignLeft="@id/sv_microphone"
+                android:layout_alignTop="@id/tv_call"
+                android:layout_toRightOf="@id/tv_call"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+            <!--切换按钮-end-->
+        </RelativeLayout>
+    </ScrollView>
+    <!--右边控制栏和信息-end-->
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/sl_right_control"
+        android:background="#F5F5F5"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/view_center"
+        android:paddingBottom="6dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="6dp"
+        android:text="北京西城讨论会"
+        android:textSize="16sp"/>
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:layout_toLeftOf="@id/view_center"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

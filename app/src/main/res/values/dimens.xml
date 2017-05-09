@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--spinner-start-->
+    <dimen name="three_grid_unit">24dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">10dp</dimen>
+    <!--spinner-end-->
+
+    <dimen name="statusbar_view_height">0dp</dimen>
+</resources>

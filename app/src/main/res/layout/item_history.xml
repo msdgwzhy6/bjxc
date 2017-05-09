@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    android:id="@+id/ll_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <!--从历史生成item-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="10%">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_number"
+            android:drawablePadding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="序号"
+            android:textSize="12sp"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="会议名称"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="18%"/>
+
+    <TextView
+        android:id="@+id/tv_proposer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="申请人"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="18%"
+        />
+
+    <TextView
+        android:id="@+id/tv_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="主办部门"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="18%"
+        />
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="所在单位"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="18%"
+        />
+
+    <TextView
+        android:id="@+id/tv_conf_parameters_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="高级参数ID"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%"
+        app:layout_widthPercent="18%"
+        />
+</com.zhy.android.percent.support.PercentLinearLayout>

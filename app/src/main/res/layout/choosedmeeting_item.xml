@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/employee_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvEmployeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="#000000"
+        app:layout_widthPercent="33%"/>
+    <TextView
+        android:id="@+id/tvEmployeeNo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvEmployeeName"
+        android:layout_toEndOf="@+id/tvEmployeeName"
+        app:layout_widthPercent="33%"/>
+    <TextView
+        android:id="@+id/tvEmployeeType"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvEmployeeNo"
+        android:layout_toEndOf="@+id/tvEmployeeNo"
+        app:layout_widthPercent="33%"/>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

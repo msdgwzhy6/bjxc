@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_home"
+    tools:context="com.zxwl.frame.activity.HomeActivity">
+
+    <include
+        layout="@layout/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--预约 会议  tv_conf_subscribe-->
+    <!--审批  tv_conf_approve-->
+    <!--控制  tv_conf_control-->
+    <!--模板管理    template_manage-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_conf_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/select_bg_home_bt"
+            android:drawablePadding="14dp"
+            android:drawableTop="@mipmap/icon_conf_subscribe"
+            android:paddingBottom="36dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="32dp"
+            android:text="会议预约"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_conf_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/select_bg_home_bt"
+            android:drawablePadding="14dp"
+            android:drawableTop="@mipmap/icon_conf_approve"
+            android:paddingBottom="36dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="32dp"
+            android:text="会议审批"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_conf_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/select_bg_home_bt"
+            android:drawablePadding="14dp"
+            android:drawableTop="@mipmap/icon_conf_control"
+            android:paddingBottom="36dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="32dp"
+            android:text="会议控制"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_template_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_bg_home_bt"
+            android:drawablePadding="14dp"
+            android:drawableTop="@mipmap/icon_template_manage"
+            android:paddingBottom="36dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="32dp"
+            android:text="模板管理"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

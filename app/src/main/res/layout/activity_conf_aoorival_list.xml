@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.zxwl.frame.activity.NewConfActivity">
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--会议搜索-start-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_title"
+        android:background="#EEE2D4"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_linear_layout"/>
+
+        <EditText
+            android:id="@+id/et_top_title_search"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_booking_meeting_input"
+            android:drawablePadding="6dp"
+            android:drawableRight="@mipmap/icon_search"
+            android:maxLines="1"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="6dp"
+            android:layout_toLeftOf="@id/tv_layout"
+            android:singleLine="true"
+            app:layout_marginRightPercent="10%"
+            app:layout_widthPercent="30%"
+            tools:text="1111111111111111111111111"
+            />
+
+        <TextView
+            android:id="@+id/tv_search_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@id/et_top_title_search"
+            android:text="关键字"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tv_time_lable"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="申请时间"
+            android:textColor="#333"/>
+
+        <com.zxwl.frame.views.spinner.NiceSpinner
+            android:id="@+id/time_spinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_time_lable"
+            android:layout_alignTop="@id/tv_time_lable"
+            android:layout_toLeftOf="@id/tv_search_lable"
+            android:layout_toRightOf="@id/tv_time_lable"
+            android:background="@drawable/bg_booking_meeting_input"
+            app:layout_marginRightPercent="10%"
+            app:layout_widthPercent="30%"
+            app:textTint="#000"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    <!--会议搜索按钮-end-->
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_operate"
+        android:background="#F5F5F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="序号"
+            android:textColor="#707070"
+            app:layout_widthPercent="7%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="会议名称"
+            android:textColor="#707070"
+            app:layout_widthPercent="20%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="申请人"
+            android:textColor="#707070"
+            app:layout_widthPercent="10%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="主办部门"
+            android:textColor="#707070"
+            app:layout_widthPercent="12%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="开始时间"
+            android:textColor="#707070"
+            app:layout_widthPercent="18%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="结束时间"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            app:layout_widthPercent="18%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:text="会议状态"
+            android:textColor="#707070"
+            app:layout_widthPercent="15%"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <include
+        layout="@layout/refresh_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

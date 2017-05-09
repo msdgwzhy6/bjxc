@@ -1,0 +1,70 @@
+<LinearLayout
+    android:id="@+id/ll_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="14dp"
+    android:background="@drawable/bg_item_conf_grid"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--EBEBEB-->
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="18dp"
+            android:paddingTop="14dp"
+            android:singleLine="true"
+            android:src="@mipmap/icon_conf_control_grid"
+            android:textColor="#4F4F4F"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_remove_bt"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="移除会场"
+            android:textColor="@android:color/white"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAB951"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:text="会议名称会议名称"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        />
+    <!--选中-->
+    <!--android:background="56D6C7"-->
+    <!--默认-->
+    <!--android:background="#FAB951"-->
+
+
+</LinearLayout>

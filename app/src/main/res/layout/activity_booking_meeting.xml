@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zxwl.frame.activity.BookingMeetingActivity">
+
+    <ScrollView
+        android:id="@+id/sl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_left_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_name_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:text="* 会议名称 :"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_name_lable"
+                android:layout_alignTop="@+id/tv_name_lable"
+                android:layout_toEndOf="@+id/tv_name_lable"
+                android:layout_toRightOf="@+id/tv_name_lable"
+                android:background="@drawable/bg_booking_meeting_input"
+                android:gravity="center_vertical"
+                android:hint="请输入会议名称"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_contacts_name_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="* 联系人 :"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/tv_contacts_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_contacts_name_lable"
+                android:layout_alignTop="@id/tv_contacts_name_lable"
+                android:layout_toRightOf="@id/tv_name_lable"
+                android:background="@drawable/bg_booking_meeting_input"
+                android:gravity="center_vertical"
+                android:hint="请输入联系人名称"
+                android:maxLength="20"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_phone_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_contacts_name_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="* 联系电话 :"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_phone_lable"
+                android:layout_alignTop="@+id/tv_phone_lable"
+                android:layout_toEndOf="@+id/tv_phone_lable"
+                android:layout_toRightOf="@+id/tv_phone_lable"
+                android:background="@drawable/bg_booking_meeting_input"
+                android:gravity="center_vertical"
+                android:hint="请输入联系电话"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_high_level_set_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_phone_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="高级参数设置 :"
+                android:textSize="12sp"/>
+
+            <!--高级参数设置-->
+            <com.zxwl.frame.views.spinner.NiceSpinner
+                android:id="@+id/sms_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_high_level_set_lable"
+                android:layout_alignTop="@id/tv_high_level_set_lable"
+                android:layout_toRightOf="@id/tv_high_level_set_lable"
+                app:textTint="#000"/>
+
+            <!--从模板生成 start-->
+            <TextView
+                android:id="@+id/tv_template_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_high_level_set_lable"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="从模板生成 :"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_template_lable"
+                android:layout_alignTop="@id/tv_template_lable"
+                android:layout_toRightOf="@id/tv_template_lable"
+                android:background="@drawable/bg_template"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="从历史生成"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_template"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_template_lable"
+                android:layout_alignTop="@id/tv_template_lable"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_history"
+                android:background="@drawable/bg_template"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="从模板生成"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+            <!--从模板生成 end-->
+
+
+            <!--选择人员 start-->
+            <TextView
+                android:id="@+id/tv_people_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_template_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="选择人员 :"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_contact_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_people_lable"
+                android:layout_alignTop="@id/tv_people_lable"
+                android:layout_toRightOf="@id/tv_template_lable"
+                android:background="@drawable/bg_template"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="通讯录"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_common_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_people_lable"
+                android:layout_alignTop="@id/tv_people_lable"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_contact_list"
+                android:background="@drawable/bg_template"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="常用群组"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_people_lable"
+                android:layout_alignTop="@id/tv_people_lable"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_common_group"
+                android:background="@drawable/bg_template"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="删除设备"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+            <!--选择人员 end-->
+
+            <!--会议号码 start-->
+            <TextView
+                android:id="@+id/tv_conf_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_people_lable"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_template"
+                android:padding="12dp"
+                android:text="会议号码 :"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+
+            <EditText
+                android:id="@+id/et_conf_number"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_conf_number"
+                android:layout_alignTop="@+id/tv_conf_number"
+                android:layout_marginLeft="12dp"
+                android:layout_toEndOf="@+id/tv_phone_lable"
+                android:layout_toRightOf="@+id/tv_conf_number"
+                android:background="@drawable/bg_booking_meeting_input"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:maxLength="8"
+                android:padding="10dp"
+                android:textSize="12sp"
+                />
+            <!--会议号码 end-->
+
+            <!--参会信息-->
+            <TextView
+                android:id="@+id/tv_participant_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_conf_number"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="参会单位1个，设备4个；"
+                android:textSize="12sp"/>
+
+            <!--会议时间 start-->
+            <TextView
+                android:id="@+id/tv_time_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_participant_info"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="会议时间 :"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_duration_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_time_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="会议时长 :"
+                android:textSize="12sp"/>
+            <!--会议时间 end-->
+
+            <!--会议通知(短信) start-->
+            <TextView
+                android:id="@+id/tv_sms_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_duration_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="会议通知(短信) :"
+                android:textSize="12sp"/>
+            <!--会议通知 end-->
+
+            <!--会议备注 start-->
+            <TextView
+                android:id="@+id/tv_remark_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_sms_lable"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="会议备注 :"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_remark_lable"
+                android:layout_alignRight="@id/tv_delete"
+                android:layout_alignTop="@+id/tv_remark_lable"
+                android:layout_marginLeft="12dp"
+                android:layout_toEndOf="@+id/tv_phone_lable"
+                android:layout_toRightOf="@+id/tv_conf_number"
+                android:background="@drawable/bg_booking_meeting_input"
+                android:hint="请输入备注信息"
+                android:maxLines="5"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="12sp"/>
+
+            <!--会议备注 end-->
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_remark_lable"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_template"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:text="保存"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/sl_content"
+        android:background="@android:color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_right_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/line"
+        >
+
+        <TextView
+            android:id="@+id/tv_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="参会列表:"
+            android:textSize="12sp"/>
+
+        <include
+            android:id="@+id/rv_title"
+            layout="@layout/item_join"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list"/>
+
+        <include
+            layout="@layout/refresh_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rv_title"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

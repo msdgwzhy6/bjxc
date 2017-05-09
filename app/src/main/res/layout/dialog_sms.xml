@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingLeft="40dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_name_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="12dp"
+        android:text="模板名称"/>
+
+    <TextView
+        android:id="@+id/tv_theme_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_name_lable"
+        android:layout_below="@id/tv_name_lable"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:text="短信主题"/>
+
+    <TextView
+        android:id="@+id/tv_content_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_name_lable"
+        android:layout_below="@id/tv_theme_lable"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:text="短信内容"/>
+
+    <com.zxwl.frame.views.spinner.NiceSpinner
+        android:id="@+id/sms_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_high_level_set_lable"
+        android:layout_toRightOf="@id/tv_name_lable"
+        android:background="@drawable/bg_booking_meeting_input"
+        app:textTint="#000"/>
+
+    <EditText
+        android:id="@+id/et_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_theme_lable"
+        android:layout_alignTop="@id/tv_theme_lable"
+        android:layout_toRightOf="@id/tv_name_lable"
+        android:background="@drawable/bg_booking_meeting_input"
+        android:padding="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:layout_alignTop="@id/tv_content_lable"
+        android:layout_toRightOf="@id/tv_name_lable"
+        android:background="@drawable/bg_top_radius">
+
+        <jp.wasabeef.richeditor.RichEditor
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ll_content"
+        android:layout_below="@id/ll_content"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/bg_bottom_radius"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@mipmap/icon_add"/>
+
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/fl_insert"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:childSpacing="auto"
+            app:childSpacingForLastRow="align"
+            app:rowSpacing="8dp">
+
+            <TextView
+                android:id="@+id/tv_conf_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_theme"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_template"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:text="会议名称"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tv_consignee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_theme"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_template"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:text="收件人"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tv_conf_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_theme"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_template"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:text="会议号码"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tv_dialog_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_theme"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_template"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:text="会议时间"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tv_site_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_conf_name"
+                android:layout_below="@id/et_theme"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_template"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:text="会场名称"
+                android:textColor="@android:color/white"/>
+        </com.nex3z.flowlayout.FlowLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
